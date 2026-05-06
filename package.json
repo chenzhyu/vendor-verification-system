@@ -1,27 +1,36 @@
 {
   "name": "vendor-verification-system",
   "version": "1.0.0",
-  "description": "供应商核销系统 - 多页应用解决方案",
-  "type": "module",
+  "description": "供应商核销系统 - 后台管理和H5核销端",
   "private": true,
+  "type": "module",
   "scripts": {
-    "dev": "concurrently \"pnpm --filter admin dev\" \"pnpm --filter h5 dev\"",
+    "dev": "pnpm -r dev",
     "dev:admin": "pnpm --filter admin dev",
     "dev:h5": "pnpm --filter h5 dev",
-    "build": "pnpm --filter admin build && pnpm --filter h5 build",
+    "build": "pnpm -r build",
     "build:admin": "pnpm --filter admin build",
     "build:h5": "pnpm --filter h5 build",
-    "preview": "concurrently \"pnpm --filter admin preview\" \"pnpm --filter h5 preview\"",
+    "preview": "pnpm -r preview",
     "preview:admin": "pnpm --filter admin preview",
     "preview:h5": "pnpm --filter h5 preview",
-    "lint": "pnpm --filter admin lint && pnpm --filter h5 lint",
-    "type-check": "pnpm --filter admin type-check && pnpm --filter h5 type-check"
+    "lint": "pnpm -r lint",
+    "type-check": "pnpm -r type-check"
   },
+  "keywords": [
+    "vue3",
+    "vite",
+    "typescript",
+    "vendor",
+    "verification"
+  ],
+  "author": "chenzhyu",
+  "license": "MIT",
   "devDependencies": {
-    "concurrently": "^8.2.2"
-  },
-  "engines": {
-    "node": ">=16",
-    "pnpm": ">=8"
+    "@typescript-eslint/eslint-plugin": "^6.0.0",
+    "@typescript-eslint/parser": "^6.0.0",
+    "eslint": "^8.45.0",
+    "eslint-plugin-vue": "^9.0.0",
+    "typescript": "^5.1.6"
   }
 }
