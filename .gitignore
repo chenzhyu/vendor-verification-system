@@ -23,11 +23,29 @@ dist-ssr
 *.sln
 *.sw?
 
-# Environment
+# Env files
 .env
 .env.local
 .env.*.local
 
-# Build
-.turbo
-.eslintcache
+# Build files
+*.tsbuildinfo
+
+# IDE
+.vscode
+.idea
+out
+.gradle
+.project
+.classpath
+.settings/
+.sts4-cache/
+.DS_Store
+.AppleDouble
+.LSOverride
+*.iml
+*.iws
+*.ipr
+*.cer
+*.jks
+*.p12
