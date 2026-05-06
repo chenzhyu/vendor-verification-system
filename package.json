@@ -1,30 +1,27 @@
 {
   "name": "vendor-verification-system",
   "version": "1.0.0",
-  "description": "供应商核销系统 - 后台管理系统 + H5移动端",
+  "description": "供应商核销系统 - 多页应用解决方案",
   "type": "module",
   "private": true,
   "scripts": {
-    "dev": "pnpm -r dev",
-    "dev:admin": "pnpm -F admin dev",
-    "dev:h5": "pnpm -F h5 dev",
-    "build": "pnpm -r build",
-    "build:admin": "pnpm -F admin build",
-    "build:h5": "pnpm -F h5 build",
-    "preview": "pnpm -r preview",
-    "preview:admin": "pnpm -F admin preview",
-    "preview:h5": "pnpm -F h5 preview",
-    "lint": "pnpm -r lint",
-    "type-check": "pnpm -r type-check"
+    "dev": "concurrently \"pnpm --filter admin dev\" \"pnpm --filter h5 dev\"",
+    "dev:admin": "pnpm --filter admin dev",
+    "dev:h5": "pnpm --filter h5 dev",
+    "build": "pnpm --filter admin build && pnpm --filter h5 build",
+    "build:admin": "pnpm --filter admin build",
+    "build:h5": "pnpm --filter h5 build",
+    "preview": "concurrently \"pnpm --filter admin preview\" \"pnpm --filter h5 preview\"",
+    "preview:admin": "pnpm --filter admin preview",
+    "preview:h5": "pnpm --filter h5 preview",
+    "lint": "pnpm --filter admin lint && pnpm --filter h5 lint",
+    "type-check": "pnpm --filter admin type-check && pnpm --filter h5 type-check"
   },
-  "keywords": [
-    "vendor",
-    "verification",
-    "system",
-    "vue3",
-    "vite",
-    "typescript"
-  ],
-  "author": "chenzhyu",
-  "license": "MIT"
+  "devDependencies": {
+    "concurrently": "^8.2.2"
+  },
+  "engines": {
+    "node": ">=16",
+    "pnpm": ">=8"
+  }
 }

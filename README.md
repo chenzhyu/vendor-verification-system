@@ -21,7 +21,7 @@ vendor-verification-system/
 - **Vite** - 下一代前端构建工具
 - **Pinia** - Vue 3 状态管理
 - **Vue Router 4** - 官方路由管理
-- **Element Plus** / **Ant Design Vue** - UI 框架（待选）
+- **Element Plus** - UI 框架
 - **Axios** - HTTP 请求库
 - **Vant** - 移动端 UI 框架（H5）
 

@@ -7,13 +7,11 @@ yarn-error.log*
 pnpm-debug.log*
 lerna-debug.log*
 
+# Dependencies
 node_modules
 dist
 dist-ssr
 *.local
-.env
-.env.local
-.env.*.local
 
 # Editor directories and files
 .vscode/*
@@ -26,21 +24,13 @@ dist-ssr
 *.sln
 *.sw?
 
-# IDE
-.vscode
-.idea
-.DS_Store
-*.swp
-*.swo
-*~
-
-# Build
-build/
-dist/
+# Environment variables
+.env
+.env.local
+.env.*.local
 
 # pnpm
-pnpm-lock.yaml
-
-# yarn
-yarn.lock
+.pnpm-debug.log
+.pnpm-lock.yaml
 package-lock.json
+yarn.lock
