@@ -1,0 +1,30 @@
+{
+  "name": "vendor-verification-system",
+  "version": "1.0.0",
+  "description": "供应商核销系统 - 后台管理系统 + H5移动端",
+  "type": "module",
+  "private": true,
+  "scripts": {
+    "dev": "pnpm -r dev",
+    "dev:admin": "pnpm -F admin dev",
+    "dev:h5": "pnpm -F h5 dev",
+    "build": "pnpm -r build",
+    "build:admin": "pnpm -F admin build",
+    "build:h5": "pnpm -F h5 build",
+    "preview": "pnpm -r preview",
+    "preview:admin": "pnpm -F admin preview",
+    "preview:h5": "pnpm -F h5 preview",
+    "lint": "pnpm -r lint",
+    "type-check": "pnpm -r type-check"
+  },
+  "keywords": [
+    "vendor",
+    "verification",
+    "system",
+    "vue3",
+    "vite",
+    "typescript"
+  ],
+  "author": "chenzhyu",
+  "license": "MIT"
+}
